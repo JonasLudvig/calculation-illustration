@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: FiraSans-Light;
+  src: url(../dist/fonts/FiraSans-Light.ttf);
+}
+
+@font-face {
+  font-family: FiraSans-Medium;
+  src: url(../dist/fonts/FiraSans-Medium.ttf);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #1e1e1e;
+}
+
+h1 {
+  color: #ecf0f1;
+  font-family: FiraSans-Medium;
+  font-size: 16px;
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+
+h2 {
+  color: #0e0e10;
+  font-family: FiraSans-Medium;
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+
+p {
+  color: #ecf0f1;
+  font-family: FiraSans-Light;
+  font-size: 14px;
+}
+
+.entry {
+  position: relative;
+  width: 260px;
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.inline {
+  display: inline;
+}
+
+.main-panel {
+  height: 100%;
+  text-align: center;
+  width: 100%;
+}
+
+.button {
+  background: #27ae60;
+  border-radius: 5px;
+  border: 0;
+  color: #1e1e1e;
+  display: block;
+  font-family: FiraSans-Medium;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 7px 15px;
+}
+
+.button:hover {
+  background: #27ae60;
+  cursor: pointer;
+}
+
+.input {
+  background: #ecf0f1;
+  border-radius: 3px;
+  border: 0;
+  font-family: FiraSans-Medium;
+  font-size: 18px;
+  padding: 10px 13px;
+  width: 150px;
+}
+
+.graph-bar-js {
+  background: #b184cf;
+  border-radius: 5px;
+  height: 35px;
+  margin-top: 20px;
+  padding: 6px;
+  width: 260px;
+}
+
+.graph-bar-fill-js {
+  background: #8344ad;
+  border-radius: 3px;
+  height: 100%;
+  width: 0%;
+}
+
+.graph-meter-js {
+  background-color: #2980b9;
+  border-top-left-radius: 130px;
+  border-top-right-radius: 130px;
+  border: 10px solid #77bae7;
+  height: 130px;
+  margin-top: 30px;
+  overflow: hidden;
+  width: 260px;
+}
+
+.graph-meter-pin-js {
+  background: #55a9e1;
+  border-radius: 5px;
+  height: 200px;
+  left: calc(50% - 5px);
+  position: relative;
+  top: 20px;
+  transform: rotate(90deg);
+  width: 10px;
+}
