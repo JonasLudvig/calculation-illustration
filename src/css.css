@@ -46,18 +46,18 @@ p {
 }
 
 .entry {
-  position: relative;
-  width: 260px;
   height: 100vh;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  width: 260px;
 }
 
 .content {
   position: absolute;
   top: 50%;
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
 }
 
 .inline {
@@ -101,6 +101,7 @@ p {
 .graph-bar-js {
   background: #b184cf;
   border-radius: 5px;
+  box-shadow: inset 0 0 8px #965abe;
   height: 35px;
   margin-top: 20px;
   padding: 6px;
@@ -111,7 +112,7 @@ p {
   background: #8344ad;
   border-radius: 3px;
   height: 100%;
-  width: 0%;
+  width: 0;
 }
 
 .graph-meter-js {
@@ -119,6 +120,7 @@ p {
   border-top-left-radius: 130px;
   border-top-right-radius: 130px;
   border: 10px solid #77bae7;
+  box-shadow: inset 0 0 8px #1b5479;
   height: 130px;
   margin-top: 30px;
   overflow: hidden;
@@ -134,4 +136,16 @@ p {
   top: 20px;
   transform: rotate(90deg);
   width: 10px;
+  z-index: 1;
+}
+
+.graph-meter-hub-js {
+  background: #55a9e1;
+  border-radius: 50%;
+  height: 40px;
+  left: calc(50% - 20px);
+  position: relative;
+  top: -102px;
+  width: 40px;
+  z-index: 2;
 }
