@@ -1,0 +1,20 @@
+@media (min-width: 550px) and (max-width: 700px) {
+  .content-item-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .doc-container {
+    max-width: 250px;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 550px) {
+  .content-item-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .doc-container {
+    max-width: 250px;
+  }
+  .content-container {
+    transform: scale(0.85);
+  }
+}

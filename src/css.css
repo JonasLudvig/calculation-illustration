@@ -18,63 +18,97 @@ html,
 body {
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 body {
-  background: #1e1e1e;
+  background: rgb(255, 255, 255);
 }
 
 h1 {
-  color: #ecf0f1;
+  color: rgb(25, 25, 25);
   font-family: FiraSans-Medium;
   font-size: 16px;
-  margin-bottom: 8px;
-  margin-top: 20px;
-}
-
-h2 {
-  color: #0e0e10;
-  font-family: FiraSans-Medium;
-  font-size: 15px;
-  margin-bottom: 2px;
+  margin: 20px 0 8px 0;
 }
 
 p {
-  color: #ecf0f1;
+  color: rgb(25, 25, 25);
   font-family: FiraSans-Light;
   font-size: 14px;
 }
 
-.entry {
-  height: 100vh;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  width: 260px;
+.doc-js {
+  font-size: 16px;
+  margin: 24px 0 0 0;
 }
 
-.content {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
+.disc-container {
+  max-width: 340px;
 }
 
-.inline {
-  display: inline;
+.control-panel-header {
+  font-size: 18px;
+  margin: 0;
 }
 
 .main-panel {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.content-container {
+  align-content: flex-start;
+  align-items: flex-start;
+  background: rgb(245, 245, 245);
+  box-shadow: 0px 0px 13px rgb(202, 202, 202);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  overflow: auto;
+}
+
+.content-container-item {
   height: 100%;
-  text-align: center;
-  width: 100%;
+}
+
+.content-container-item-left {
+  width: 200px;
+}
+
+.content-container-item-right {
+  background: rgb(245, 245, 245);
+  padding: 25px 15px 20px 20px;
+  width: fit-content;
+}
+
+.control-panel {
+  background: rgb(245, 245, 245);
+  padding: 20px;
+}
+
+.content-item-container {
+  align-items: flex-end;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: fit-content;
+  position: relative;
+}
+
+.content-item {
+  height: fit-content;
+  margin: 10px;
+  width: fit-content;
 }
 
 .button {
-  background: #27ae60;
+  background: rgb(38, 231, 166);
   border-radius: 5px;
   border: 0;
-  color: #1e1e1e;
+  color: rgb(25, 25, 25);
   display: block;
   font-family: FiraSans-Medium;
   font-size: 14px;
@@ -84,68 +118,111 @@ p {
 }
 
 .button:hover {
-  background: #27ae60;
+  background: rgb(103, 238, 192);
   cursor: pointer;
 }
 
 .input {
-  background: #ecf0f1;
+  background: rgb(255, 255, 255);
   border-radius: 3px;
-  border: 0;
+  border: 2px rgb(225, 225, 225) solid;
   font-family: FiraSans-Medium;
   font-size: 18px;
   padding: 10px 13px;
   width: 150px;
 }
 
+.graph-bar-chart-data-js {
+  height: 20px;
+  margin: 3px 0 0 0;
+  position: relative;
+  text-align: center;
+  top: -24px;
+  width: 100%;
+}
+
+.graph-bar-chart-js {
+  display: flex;
+  flex-direction: row;
+  height: 140px;
+  width: fit-content;
+}
+
+.graph-bar-chart-item-first-js {
+  background: rgb(104, 212, 205);
+  height: 0;
+  margin: auto 8px 0 0;
+  width: 35px;
+}
+
+.graph-bar-chart-item-second-js {
+  background: rgb(148, 218, 251);
+  height: 0;
+  margin: auto 8px 0 0;
+  width: 35px;
+}
+
+.graph-bar-chart-item-third-js {
+  background: rgb(253, 128, 128);
+  height: 0;
+  margin: auto 0 0 0;
+  width: 35px;
+}
+
+.graph-meter-js {
+  background-color: rgb(169, 240, 217);
+  border-top-left-radius: 120px;
+  border-top-right-radius: 120px;
+  height: 120px;
+  position: relative;
+  width: 240px;
+}
+
+.graph-meter-inlay-js {
+  background: rgb(245, 245, 245);
+  border-top-left-radius: 120px;
+  border-top-right-radius: 120px;
+  bottom: -1px;
+  height: 65px;
+  left: calc(50% - 65px);
+  position: absolute;
+  width: 130px;
+  z-index: 1;
+}
+
+.graph-meter-pin-js {
+  background: rgb(25, 25, 25);
+  border-top-left-radius: 45%;
+  border-top-right-radius: 45%;
+  bottom: 0;
+  height: 100px;
+  left: calc(50% - 5px);
+  position: absolute;
+  transform-origin: bottom center;
+  transform: rotate(-90deg);
+  width: 10px;
+  z-index: 2;
+}
+
 .graph-bar-js {
-  background: #b184cf;
-  border-radius: 5px;
-  box-shadow: inset 0 0 8px #965abe;
-  height: 35px;
-  margin-top: 20px;
+  background: rgb(197, 186, 235);
+  height: 29px;
   padding: 6px;
-  width: 260px;
+  width: 240px;
 }
 
 .graph-bar-fill-js {
-  background: #8344ad;
-  border-radius: 3px;
+  background: rgb(173, 158, 227);
   height: 100%;
   width: 0;
 }
 
-.graph-meter-js {
-  background-color: #2980b9;
-  border-top-left-radius: 130px;
-  border-top-right-radius: 130px;
-  border: 10px solid #77bae7;
-  box-shadow: inset 0 0 8px #1b5479;
-  height: 130px;
-  margin-top: 30px;
-  overflow: hidden;
-  width: 260px;
+.graph-bar-diff-fill-js {
+  background: rgb(139, 117, 215);
+  height: 100%;
+  width: 0;
 }
 
-.graph-meter-pin-js {
-  background: #55a9e1;
-  border-radius: 5px;
-  height: 200px;
-  left: calc(50% - 5px);
-  position: relative;
-  top: 20px;
-  transform: rotate(90deg);
-  width: 10px;
-  z-index: 1;
-}
-
-.graph-meter-hub-js {
-  background: #55a9e1;
-  border-radius: 50%;
-  height: 40px;
-  left: calc(50% - 20px);
-  position: relative;
-  top: -102px;
-  width: 40px;
-  z-index: 2;
+.graph-data-js {
+  margin: 5px 0 0 8px;
 }

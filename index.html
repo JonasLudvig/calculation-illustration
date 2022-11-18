@@ -6,26 +6,68 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./src/css.css" />
+  <link rel="stylesheet" href="./src/media-queries.css" />
   <title>Calculation Illustration</title>
 </head>
 
 <body>
-  <div class="entry">
-    <div class="content">
-      <h1>Reference Value</h1>
-      <input type="text" maxlength="7" value="200" class="input ref-val-js">
-
-      <h1>Calculation Value</h1>
-      <input type="text" maxlength="7" value="145" class="input calc-val-js">
-
-      <button class="button ill-js">Illustrate</button>
-      <div class="graph-bar-js">
-        <div class="graph-bar-fill-js"></div>
+  <div class="main-panel">
+    <div class="content-container">
+      <div class="content-container-item content-container-item-left">
+        <div class="control-panel">
+          <h1 class="control-panel-header">Control Panel</h1>
+          <h1>Reference Value</h1>
+          <input type="text" maxlength="7" value="200" class="input ref-val-js">
+          <h1>Calculation Value</h1>
+          <input type="text" maxlength="7" value="145" class="input calc-val-js">
+          <h1>Delta</h1>
+          <input type="range" min="0" max="4" value="2" class="delta-val-js">
+          <button class="button ill-js">Illustrate</button>
+        </div>
       </div>
-
-      <div class="graph-meter-js">
-        <div class="graph-meter-pin-js"></div>
-        <div class="graph-meter-hub-js"></div>
+      <div class="content-container-item content-container-item-right">
+        <div class="content-item-container">
+          <div class="content-item">
+            <div class="graph-bar-chart-js">
+              <div class="graph-bar-chart-item-first-js">
+                <div class="graph-bar-chart-data-js">
+                  <p class="chart-data-first-js">0%</p>
+                </div>
+              </div>
+              <div class="graph-bar-chart-item-second-js">
+                <div class="graph-bar-chart-data-js">
+                  <p class="chart-data-second-js">0%</p>
+                </div>
+              </div>
+              <div class="graph-bar-chart-item-third-js">
+                <div class="graph-bar-chart-data-js">
+                  <p class="chart-data-third-js">0%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-item">
+            <div class="graph-meter-js">
+              <div class="graph-meter-inlay-js">
+                <div class="graph-meter-pin-js"></div>
+                <div class="graph-meter-hub-js"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-item">
+          <div class="graph-bar-js">
+            <div class="graph-bar-fill-js">
+              <div class="graph-bar-diff-fill-js"></div>
+            </div>
+          </div>
+          <div class="graph-data-js">
+            <p class="bar-data-js">Diff. 0%</p>
+          </div>
+        </div>
+        <div class="disc-container">
+          <p class="doc-js"></p>
+        </div>
       </div>
     </div>
   </div>
