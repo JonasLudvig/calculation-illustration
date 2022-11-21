@@ -1,13 +1,12 @@
 "use strict";
-let bar = document.querySelector('.graph-bar-fill-js');
 let ref = document.querySelector('.ref-val-js');
 let calc = document.querySelector('.calc-val-js');
 let delta = document.querySelector('.delta-val-js');
 let exec = document.querySelector('.ill-js');
-let barDiff = document.querySelector('.graph-bar-diff-fill-js');
 let meter = document.querySelector('.graph-meter-pin-js');
+let bar = document.querySelector('.graph-bar-fill-js');
 let barDiffData = document.querySelector('.bar-data-js');
-let disc = document.querySelector('.doc-js');
+let disc = document.querySelector('.disc-js');
 let chartDataFirst = document.querySelector('.chart-data-first-js');
 let chartDataSecond = document.querySelector('.chart-data-second-js');
 let chartDataThird = document.querySelector('.chart-data-third-js');
@@ -34,9 +33,8 @@ function illustrate(target) {
     let count = 0;
     chartBarThird.style.height = `${0}%`;
     function step(timestamp) {
-        if (start === undefined) {
+        if (start === undefined)
             start = timestamp;
-        }
         if (previousTimeStamp !== timestamp) {
             count++;
             meter.style.transform = `rotate(${-90 + count * 1.8}deg)`;
@@ -44,8 +42,7 @@ function illustrate(target) {
             chartBarSecond.style.height = `${Math.round(count * 0.75 + parseInt(delta.value))}%`;
             chartBarThird.style.height = `${Math.round(count * 0.5 - parseInt(delta.value))}%`;
             let diff = 100 - count;
-            barDiff.style.width = `${diff}%`;
-            bar.style.width = `${count}%`;
+            bar.style.width = `${diff}%`;
             chartDataFirst.innerText = `${Math.round(count)}%`;
             chartDataSecond.innerText = `${Math.round(count * 0.75 + parseInt(delta.value))}%`;
             chartDataThird.innerText = `${Math.round(count * 0.5 - parseInt(delta.value))}%`;

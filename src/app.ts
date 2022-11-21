@@ -1,12 +1,11 @@
-let bar = document.querySelector('.graph-bar-fill-js') as HTMLElement;
 let ref = document.querySelector('.ref-val-js') as HTMLInputElement;
 let calc = document.querySelector('.calc-val-js') as HTMLInputElement;
 let delta = document.querySelector('.delta-val-js') as HTMLInputElement;
 let exec = document.querySelector('.ill-js') as HTMLElement;
-let barDiff = document.querySelector('.graph-bar-diff-fill-js') as HTMLElement;
 let meter = document.querySelector('.graph-meter-pin-js') as HTMLElement;
+let bar = document.querySelector('.graph-bar-fill-js') as HTMLElement;
 let barDiffData = document.querySelector('.bar-data-js') as HTMLElement;
-let disc = document.querySelector('.doc-js') as HTMLElement;
+let disc = document.querySelector('.disc-js') as HTMLElement;
 let chartDataFirst = document.querySelector(
   '.chart-data-first-js'
 ) as HTMLElement;
@@ -73,8 +72,7 @@ function illustrate(target: number) {
 
       let diff = 100 - count;
 
-      barDiff.style.width = `${diff}%`;
-      bar.style.width = `${count}%`;
+      bar.style.width = `${diff}%`;
       chartDataFirst.innerText = `${Math.round(count)}%`;
       chartDataSecond.innerText = `${Math.round(
         count * 0.75 + parseInt(delta.value)
